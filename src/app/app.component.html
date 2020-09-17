@@ -1,85 +1,17 @@
-
-    <!-- Left Panel -->
-    <aside id="left-panel" class="left-panel">
-        <navigation></navigation>
-    </aside>
-    <!-- /#left-panel -->
-    <!-- Right Panel -->
-    <div id="right-panel" class="right-panel">
-        <!-- Header-->
-       <menu></menu>
-        <!-- /#header -->
-
-
-
-        <!-- Content -->
-        <div class="content">
-            <!-- Animated -->
-            <div class="animated fadeIn">
-                <!-- Widgets  -->
-                <widgets></widgets>
-               
-                <!-- /Widgets -->
-                <!--  Traffic  -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="box-title">Traffic </h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="card-body">
-                                        <!-- <canvas id="TrafficChart"></canvas>   -->
-                                        <div class="table-stats order-table ov-h">
-                                          <table class="table ">
-                                              <thead>
-                                                  <tr>
-                                                      <th class="serial">#</th>
-                                                      <th class="avatar">Avatar</th>
-                                                      <th>ID</th>
-                                                      <th>Name</th>
-                                                      <th>Product</th>
-                                                      <th>Quantity</th>
-                                                      <th>Status</th>
-                                                  </tr>
-                                              </thead>
-                                              <tbody>
-                                                  <tr>
-                                                      <td class="serial">1.</td>
-                                                      <td class="avatar">
-                                                          <div class="round-img">
-                                                              <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
-                                                          </div>
-                                                      </td>
-                                                      <td> #5469 </td>
-                                                      <td>  <span class="name">Louis Stanley</span> </td>
-                                                      <td> <span class="product">iMax</span> </td>
-                                                      <td><span class="count">231</span></td>
-                                                      <td>
-                                                          <span class="badge badge-complete">Complete</span>
-                                                      </td>
-                                                  </tr>
-                                               
-                                              </tbody>
-                                          </table>
-                                      </div> <!-- /.table-stats -->
-                                    </div>
-                                </div>
-                               
-                            </div> <!-- /.row -->
-                            <div class="card-body"></div>
-                        </div>
-                    </div><!-- /# column -->
-                </div>
-                <!--  /Traffic -->
-                <div class="clearfix"></div>
-                <!-- Orders -->
-              
-      </div>
+<!-- Left Panel -->
+<aside id="left-panel" class="left-panel">
+    <navigation></navigation>
+</aside>
+<!-- /#left-panel -->
+<!-- Right Panel -->
+<div id="right-panel" class="right-panel">
+    <!-- Header-->
+    <menu></menu>
+    <!-- /#header -->
+    <!-- Content -->
+    <div class="content">
+        <!-- Animated -->
+        <router-outlet></router-outlet>
+    </div>
+    <footer></footer>
 </div>
-<footer></footer> 
-</div>  
-       
-    
-
