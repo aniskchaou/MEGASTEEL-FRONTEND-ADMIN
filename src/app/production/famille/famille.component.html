@@ -23,28 +23,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td class="serial">Cadre</td>
-                      <td class="serial">Cadre</td>
-                      <td class="serial">Cadre</td>
-                      <td class="serial">23</td>
-                      <td class="serial">11</td>
-                      <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                        <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                    <tr *ngFor="let f of familles">
+                      <td class="serial">{{f.nom}}</td>
+                      <td class="serial">{{f.familleEntrant}}</td>
+                      <td class="serial">{{f.familleSortant}}</td>
+                      <td class="serial">{{f.nombreArticle}}</td>
+                      <td class="serial">{{f.nombreMachine}}</td>
+                      <td>
+                        <a class="btn btn-warning btn-sm" routerLink="/editer-famille/{{f.id}}" role="button"><i class="fa fa-edit"></i></a>
                         <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
                       </td>
                     </tr>
-                    <tr>
-                        <td class="serial">Fil machine</td>
-                        <td class="serial">Fil machine</td>
-                        <td class="serial">Fil machine</td>
-                        <td class="serial">38</td>
-                        <td class="serial">8</td>
-                        <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                          <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
-                          <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
-                        </td>
-                      </tr>
+
 
                   </tbody>
                 </table>
@@ -53,7 +43,7 @@
           </div>
 
         </div> <!-- /.row -->
-        <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+        <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
       </div>
     </div><!-- /# column -->
   </div>

@@ -1,3 +1,5 @@
+import { ClientService } from './../services/client.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsComponent implements OnInit {
 
-  constructor() { }
+  clients
+  constructor(private router:Router,private clientService:ClientService) { }
 
   ngOnInit() {
+    this.clientService.tous().subscribe(data=>{
+      this.clients=data;
+    })
   }
 
+
+  redirectAjouter()
+  {
+    this.router.navigateByUrl("ajouter-client");
+  }
+
+  redirectEditer()
+  {
+
+  }
 }

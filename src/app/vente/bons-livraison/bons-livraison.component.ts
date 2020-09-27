@@ -1,3 +1,6 @@
+import { BonEntreeAchatService } from './../../achat/services/bon.entree.achat.service';
+import { BonLivraisonService } from './../services/bon-livraison.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bons-livraison.component.css']
 })
 export class BonsLivraisonComponent implements OnInit {
-
-  constructor() { }
+  
+  livraisons
+  constructor(private router:Router,private bonLivraisonService:BonLivraisonService) { }
 
   ngOnInit() {
+    this.bonLivraisonService.tous().subscribe(data=>{
+      this.livraisons=data;
+    })
   }
 
+
+  redirectAjouter()
+  {
+    this.router.navigateByUrl("ajouter-bon-livraison");
+  }
+
+  redirectEditer()
+  {
+
+  }
 }

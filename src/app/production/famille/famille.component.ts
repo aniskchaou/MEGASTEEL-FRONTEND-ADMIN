@@ -1,3 +1,5 @@
+import { FamilleService } from './../services/famille.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./famille.component.css']
 })
 export class FamilleComponent implements OnInit {
-
-  constructor() { }
+  
+  familles
+  constructor(private router:Router,private familleService:FamilleService) { }
 
   ngOnInit() {
+    this.familleService.tous().subscribe(data=>{
+      this.familles=data;
+    })
   }
 
+  redirectAjouter()
+  {
+    this.router.navigateByUrl("ajouter-famille");
+  }
+
+  redirectEditer()
+  {
+
+  }
 }

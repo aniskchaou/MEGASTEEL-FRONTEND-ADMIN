@@ -1,0 +1,69 @@
+
+
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <strong class="card-title">Editer Activité</strong>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!-- <canvas id="TrafficChart"></canvas>   -->
+              <form>
+                <div class="form-group">
+                  <label for="codeOF">Nom de l'activité</label> 
+                  <input id="nom" [(ngModel)]="model.nom" name="codeOF" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="familleEntrant">Famille entrant</label> 
+                  <div>
+                    <select id="familleEntrant" [(ngModel)]="model.familleEntrant" name="familleEntrant" class="custom-select">
+                      <option value="3E3E23">132E1D</option>
+                      <option value="3DE23">1E3D23</option>
+                      <option value="3E23D">D3221</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="familleSortant">Famille Sortant</label> 
+                  <div>
+                    <select id="familleSortant" [(ngModel)]="model.familleSortant" name="familleSortant" class="custom-select">
+                      <option value="31SASZA">21S12S</option>
+                      <option value="A2SDA">1S21S</option>
+                      <option value="78TFH">ZA3E32</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="nombreArticle">Nombre d'article</label> 
+                  <input id="nombreArticle" [(ngModel)]="model.nombreArticle" name="nombreArticle" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="codeMachine">Nombre de machine</label> 
+                  <input id="nombreMachine" [(ngModel)]="model.nombreMachine" name="codeMachine" type="text" class="form-control">
+                </div> 
+                <div class="form-group">
+                  <button name="submit" (click)="onSubmit()" type="submit" class="btn btn-primary">Editer</button>
+                </div>
+              </form>
+              
+          
+
+
+
+              <!-- /.table-stats -->
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+        
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+</div>

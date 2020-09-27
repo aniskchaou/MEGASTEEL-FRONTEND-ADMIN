@@ -1,0 +1,57 @@
+
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              <strong class="card-title">Editer fournisseur</strong>
+          </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!-- <canvas id="TrafficChart"></canvas>   -->
+              <form>
+                <div class="form-group">
+                  <label for="codeFounisseur">Code fournisseur</label> 
+                  <input [(ngModel)]="model.codeFounisseur" id="codeFounisseur" name="codeFounisseur" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="nom">Nom</label> 
+                  <input [(ngModel)]="model.nom" id="nom" name="nom" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="adresse">Adresse</label> 
+                  <input [(ngModel)]="model.adresse" id="adresse" name="adresse" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="tva">TVA</label> 
+                  <input [(ngModel)]="model.tva" id="tva" name="tva" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="telephone">Téléphone</label> 
+                  <input [(ngModel)]="model.telephone" id="telephone" name="telephone" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="fax">Fax</label> 
+                  <input [(ngModel)]="model.fax" id="fax" name="fax" type="text" class="form-control">
+                </div> 
+                <div class="form-group">
+                  <button name="submit" (click)="onSubmit()" type="submit" class="btn btn-primary">Editer Fournisseur</button>
+                </div>
+              </form>
+              
+       
+               <!-- /.table-stats -->
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+</div>
+

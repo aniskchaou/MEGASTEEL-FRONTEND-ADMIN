@@ -26,18 +26,20 @@
                                   </tr>
                               </thead>
                               <tbody>
-                                  <tr>
-                                      <td class="serial">Laminage</td>
-                                      <td class="serial">Spirale</td>
-                                      <td class="serial">Spirale</td>
-                                      <td class="serial">1000</td>
-                                      <td class="serial">7</td>
-                                      <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                                        <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
-                                        <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
-                                      </td>
-                                      
-                                  </tr>
+                             
+
+                                  <tr *ngFor="let a of activites">
+                                    <td class="serial">{{a.nom}}</td>
+                                    <td class="serial">{{a.familleEntrant}}</td>
+                                    <td class="serial">{{a.familleSortant}}</td>
+                                    <td class="serial">{{a.nombreArticle}}</td>
+                                    <td class="serial">{{a.nombreMachine}}</td>
+                                    <td>
+                                    <a class="btn btn-warning btn-sm" routerLink="/editer-activite/{{a.id}}"  role="button"><i class="fa fa-edit"></i></a>
+                                      <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                    
+                                </tr>
                                
                               </tbody>
                           </table>
@@ -46,7 +48,7 @@
                 </div>
                
             </div> <!-- /.row -->
-            <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+            <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
         </div>
       </div><!-- /# column -->
     </div>

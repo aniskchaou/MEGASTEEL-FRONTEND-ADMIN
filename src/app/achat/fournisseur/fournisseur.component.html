@@ -27,17 +27,17 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr *ngFor="let f of fournisseurs">
                         
-                        <td class="serial">8RDV4</td>
-                        <td class="serial">Ferriere Nord Pittini</td>
-                        <td class="serial">Italie</td>
-                        <td class="serial"></td>
-                        <td class="serial">+39 67 74 44 00</td>
-                        <td class="serial">Elena Contardo</td>
-                        <td class="serial">+39 67 74 44 00</td>
-                        <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                          <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                        <td class="serial">{{f.codeFournisseur}}</td>
+                        <td class="serial">{{f.nom}}</td>
+                        <td class="serial">{{f.adresse}}</td>
+                        <td class="serial">{{f.tva}}</td>
+                        <td class="serial">{{f.telephone}}</td>
+                        <td class="serial">{{f.responsable}}</td>
+                        <td class="serial">{{f.fax}}</td>
+                        <td>
+                          <a class="btn btn-warning btn-sm" routerLink="/editer-fournisseur/{{f.id}}" href="#" role="button"><i class="fa fa-edit"></i></a>
                           <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
                         </td>
                       </tr>
@@ -49,7 +49,7 @@
             </div>
   
           </div> <!-- /.row -->
-          <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+          <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
         </div>
       </div><!-- /# column -->
     </div>

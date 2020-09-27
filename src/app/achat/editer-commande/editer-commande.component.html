@@ -1,0 +1,51 @@
+
+
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              <strong class="card-title">Editer commande</strong>
+          </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!-- <canvas id="TrafficChart"></canvas>   -->
+              <form>
+                <div class="form-group">
+                  <label for="codeFournisseur">Code fournisseur</label> 
+                  <input [(ngModel)]="model.codeFournisseur" id="codeFournisseur" name="codeFournisseur" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="date">Date</label> 
+                  <input [(ngModel)]="model.date" id="date" name="date" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="etat">Etat</label> 
+                  <div>
+                    <select [(ngModel)]="model.etat" id="etat" name="etat" class="custom-select">
+                      <option value="En Attente">En Attente</option>
+                      <option value="Validé">Validé</option>
+                    </select>
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <button name="submit" type="submit" (click)="onSubmit()" class="btn btn-primary">Editer</button>
+                </div>
+              </form>
+                
+               
+               <!-- /.table-stats -->
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+</div>
+

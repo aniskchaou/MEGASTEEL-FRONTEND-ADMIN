@@ -1,3 +1,5 @@
+import { CommandeService } from './../../achat/services/commande.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commande.component.css']
 })
 export class CommandeComponent implements OnInit {
-
-  constructor() { }
+  
+  commandes
+  constructor(private router:Router,private commandeService:CommandeService) { }
 
   ngOnInit() {
+    this.commandeService.tous().subscribe(data=>{
+      this.commandes=data;
+    })
   }
 
+  
+  redirectAjouter()
+  {
+    this.router.navigateByUrl("ajouter-commande");
+  }
+
+  redirectEditer()
+  {
+
+  }
 }

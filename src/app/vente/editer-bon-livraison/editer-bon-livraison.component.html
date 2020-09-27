@@ -1,0 +1,73 @@
+
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              <strong class="card-title">Editer bon de livraison</strong>
+          </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!-- <canvas id="TrafficChart"></canvas>   -->
+              
+<form>
+  <div class="form-group">
+    <label for="codeCommande">Code Commande</label> 
+    <div>
+      <select [(ngModel)]="model.codeCommande" id="codeCommande" name="codeCommande" class="custom-select">
+        <option value="23E23">123E1</option>
+        <option value="23E23E">12E12E</option>
+        <option value="23E2">13E23</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="codeArticle">Code Article</label> 
+    <div>
+      <select [(ngModel)]="model.codeArticle" id="codeArticle" name="codeArticle" class="custom-select">
+        <option value="23E23E">AE123</option>
+        <option value="23E23E">232E2</option>
+        <option value="2323E23">23E2</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="codeClient">Code Client</label> 
+    <div>
+      <select [(ngModel)]="model.codeClient" id="codeClient" name="codeClient" class="custom-select">
+        <option value="23E323">1E11E</option>
+        <option value="DA32">23E23</option>
+        <option value="23E23">23E23</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="quantite">Quantité</label> 
+    <input  [(ngModel)]="model.quantite" id="quantite" name="quantite" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="date">Date</label> 
+    <input [(ngModel)]="model.date" id="date" name="date" type="text" class="form-control">
+  </div> 
+  <div class="form-group">
+    <button name="submit" type="submit" (click)="onSubmit()" class="btn btn-primary">Editer</button>
+  </div>
+</form>
+
+
+               
+               <!-- /.table-stats -->
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+</div>
+

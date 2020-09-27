@@ -1,0 +1,64 @@
+
+
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              <strong class="card-title">Créer Opérateur</strong>
+          </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!-- <canvas id="TrafficChart"></canvas>   -->
+              <form [formGroup]="ofForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="code">Code</label> 
+                  <input formControlName="code" id="code" name="code" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="nom">Nom</label> 
+                  <input formControlName="nom" id="nom" name="nom" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="prenom">Prénom</label> 
+                  <input formControlName="prenom" id="prenom" name="prenom" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="telephone">Téléphone</label> 
+                  <input formControlName="telephone" id="telephone" name="telephone" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label> 
+                  <input  formControlName="email" id="email" name="email" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="etat">Etat</label> 
+                  <div>
+                    <select formControlName="etat" id="etat" name="etat" class="custom-select">
+                      <option value="Active">Active</option>
+                      <option value="Inactive">Inactive</option>
+                    </select>
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <button name="submit" type="submit" class="btn btn-primary">Créer</button>
+                </div>
+              </form>
+              
+            
+               <!-- /.table-stats -->
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+</div>
+
+

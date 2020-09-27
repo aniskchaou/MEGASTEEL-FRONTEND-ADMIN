@@ -1,0 +1,68 @@
+
+
+
+
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              <strong class="card-title">Editer Familles</strong>
+          </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!-- <canvas id="TrafficChart"></canvas>   -->
+              <form>
+                <div class="form-group">
+                  <label for="nomFamille">Nom de la Famille</label> 
+                  <input  [(ngModel)]="model.nomFamille" id="nomFamille" name="nomFamille" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="articleEntrant">Article Entrant</label> 
+                  <div>
+                    <select [(ngModel)]="model.articleEntrant" id="articleEntrant" name="articleEntrant" class="custom-select">
+                      <option value="231D332">313E13</option>
+                      <option value="32E3E">3E23E</option>
+                      <option value="23E23E">23E32E</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="articleSortant">Article Sortant</label> 
+                  <div>
+                    <select id="articleSortant" [(ngModel)]="model.articleSortant" name="articleSortant" class="custom-select">
+                      <option value="12Z12">21Z2</option>
+                      <option value="12Z12">2Z12</option>
+                      <option value="12Z12">12Z12</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="nombreArticle">Nombre Article</label> 
+                  <input id="nombreArticle"  [(ngModel)]="model.nombreArticle" name="nombreArticle" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="nombreMachine">Nombre Machine</label> 
+                  <input id="nombreMachine" [(ngModel)]="model.nombreMachine" name="nombreMachine" type="text" class="form-control">
+                </div> 
+                <div class="form-group">
+                  <button name="submit" (click)="onSubmit()" type="submit" class="btn btn-primary">Editer Famille</button>
+                </div>
+              </form>
+               
+               
+               <!-- /.table-stats -->
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+</div>
+

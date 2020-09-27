@@ -1,3 +1,5 @@
+import { ActiviteService } from './../services/activite.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActiviteComponent implements OnInit {
 
-  constructor() { }
+  activites
+  constructor(private router:Router,private activiteService:ActiviteService) { }
 
   ngOnInit() {
+    this.activiteService.tous().subscribe(data=>{
+      this.activites=data;
+    })
+  }
+
+  redirectAjouter()
+  {
+    this.router.navigateByUrl("ajouter-activite");
+  }
+
+  redirectEditer(id)
+  {
+    this.router.navigateByUrl("editer-activite/"+id);
   }
 
 }

@@ -1,3 +1,5 @@
+import { BonfabricationService } from './../services/bonfabrication.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BonEntreeFabricationComponent implements OnInit {
 
-  constructor() { }
-
+  fabrications
+  constructor(private router:Router,private bonEntreFabrication:BonfabricationService) { }
+  
   ngOnInit() {
+    this.bonEntreFabrication.tous().subscribe(data=>{
+      this.fabrications=data;
+    })
   }
 
+
+  redirectAjouter()
+  {
+    this.router.navigateByUrl("ajouter-bon-entree-fabrication");
+  }
+
+  redirectEditer()
+  {
+
+  }
 }

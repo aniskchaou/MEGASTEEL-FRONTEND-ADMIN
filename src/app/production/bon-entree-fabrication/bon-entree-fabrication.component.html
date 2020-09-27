@@ -27,19 +27,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="serial">7RVT</td>
-                                    <td class="serial">7HVRY</td>
-                                    <td class="serial">103</td>
-                                    <td class="serial">5</td>
-                                    <td class="serial">11/09/2017</td>
-                                    <td class="serial">U</td>
-                                    <td class="serial">15</td>
-                                    <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                                        <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                                <tr *ngFor="let f of fabrications">
+                                    <td class="serial">{{f.code}}</td>
+                                    <td class="serial">{{f.codeOF}}</td>
+                                    <td class="serial">{{f.quantite}}</td>
+                                    <td class="serial">{{f.duree}}</td>
+                                    <td class="serial">{{f.date}}</td>
+                                    <td class="serial">{{f.unite}}</td>
+                                    <td class="serial">{{f.quantite}}</td>
+                                    <td>
+                                        <a class="btn btn-warning btn-sm" routerLink="/editer-bon-entree-fabrication/{{f.id}}" role="button"><i class="fa fa-edit"></i></a>
                                         <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
                                       </td>
                                 </tr>
+
+                                
                              
                             </tbody>
                         </table>
@@ -48,7 +50,7 @@
               </div>
              
           </div> <!-- /.row -->
-          <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+          <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
       </div>
     </div><!-- /# column -->
   </div>

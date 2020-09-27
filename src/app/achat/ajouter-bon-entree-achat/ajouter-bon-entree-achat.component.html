@@ -1,3 +1,50 @@
-<p>
-  ajouter-bon-entree-achat works!
-</p>
+
+
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              <strong class="card-title">Créer bon entrée achat</strong>
+          </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!-- <canvas id="TrafficChart"></canvas>   -->
+              <form [formGroup]="bonAchatForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="code">Code</label> 
+                  <input id="code" formControlName="code" name="code" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="date">Date</label> 
+                  <input id="date" formControlName="date" name="date" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="quantite">Quantité</label> 
+                  <input id="quantite" formControlName="quantite" name="quantite" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="unite">Unité</label> 
+                  <input id="unite" formControlName="unite" name="unite" type="text" class="form-control">
+                </div> 
+                <div class="form-group">
+                  <button name="submit" type="submit" class="btn btn-primary">Créer </button>
+                </div>
+              </form>
+              
+               
+               <!-- /.table-stats -->
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+</div>
+

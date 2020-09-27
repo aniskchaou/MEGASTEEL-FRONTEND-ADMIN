@@ -1,0 +1,57 @@
+
+
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              <strong class="card-title">Ordres de fabrication</strong>
+          </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+            
+<form [formGroup]="interventionForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="references">Réferences</label> 
+    <input id="references" formControlName="references"  name="references" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="cout">Cout</label> 
+    <input id="cout" name="cout" type="text" formControlName="cout" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="delai">Délai</label> 
+    <input id="delai" name="delai" type="text" formControlName="delai"  class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="etat">Etat</label> 
+    <div>
+      <select id="etat" name="etat" formControlName="etat"  class="custom-select">
+        <option value="Planifié">Planifié</option>
+        <option value="Traité">Traité</option>
+        <option value="Cloturé">Cloturé</option>
+      </select>
+    </div>
+  </div> 
+  <div class="form-group">
+    <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+            
+               <!-- /.table-stats -->
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+        <div class="card-footer"><a class="btn btn-success" (click)="redirectAddOf()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+</div>
+

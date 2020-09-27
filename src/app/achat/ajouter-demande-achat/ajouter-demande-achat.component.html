@@ -1,3 +1,85 @@
-<p>
-  ajouter-demande-achat works!
-</p>
+
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              <strong class="card-title">Ordres de fabrication</strong>
+          </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!-- <canvas id="TrafficChart"></canvas>   -->
+              
+                <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="avatar">Code OF</th>
+                      <th>Quantité realisé</th>
+                      <th>Quantité restant</th>
+                      <th>Code machine</th>
+                      <th>Article sortant</th>
+                      <th>Article entrant</th>
+                      <th>Etat</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="serial">63GT</td>
+                      <td class="serial">12</td>
+                      <td class="serial">231</td>
+                      <td class="serial">ED3VS</td>
+                      <td class="serial">2ACE4</td>
+                      <td class="serial">4CVD2</td>
+                      <td class="serial"><span class="badge badge-success">Planifié</span></td>
+                      <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                        <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td class="serial">74DC</td>
+                        <td class="serial">11</td>
+                        <td class="serial">23</td>
+                        <td class="serial">ED3VS</td>
+                        <td class="serial">213E</td>
+                        <td class="serial">3D44</td>
+                        <td class="serial"><span class="badge badge-warning">Démarré</span></td>
+                        <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
+                          <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td class="serial">9FNC</td>
+                          <td class="serial">44</td>
+                          <td class="serial">88</td>
+                          <td class="serial">3DBC</td>
+                          <td class="serial">2DJC</td>
+                          <td class="serial">2DPC</td>
+                          <td class="serial"><span class="badge badge-danger">Terminé</span> </td>
+                          <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
+                            <a (click)="redirectEditerOf()" class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                            <a  class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+
+                  </tbody>
+                </table>
+               
+               <!-- /.table-stats -->
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+        <div class="card-footer"><a class="btn btn-success" (click)="redirectAddOf()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+</div>
+

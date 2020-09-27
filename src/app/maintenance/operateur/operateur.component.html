@@ -21,22 +21,19 @@
                                           <th>Téléphone</th>
                                           <th>Email</th>
                                           <th>Etat</th>
-                                          <th></th>
+                                          
                                           
                                       </tr>
                                   </thead>
                                   <tbody>
-                                      <tr>
-                                          <td class="serial">09TGR</td>
-                                          <td class="serial">Mohamed </td>
-                                          <td>Ben mohamed</td>
-                                          <td class="serial">75 234 343</td>
-                                          <td class="serial">mohamed@gmail.com</td>
-                                          <td class="serial"><span class="badge badge-success">Active</span></td>
-                                          <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                                            <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
-                                            <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
-                                          </td>
+                                      <tr *ngFor="let o of operateurs">
+                                          <td class="serial">{{o.code}}</td>
+                                          <td class="serial">{{o.nom}} </td>
+                                          <td>{{o.prenom}}</td>
+                                          <td class="serial">{{o.telephone}}</td>
+                                          <td class="serial">{{o.email}}</td>
+                                          <td class="serial"><span class="badge badge-success">{{o.etat}}</span></td>
+                                        
                                           
                                       </tr>
                                    
@@ -47,7 +44,7 @@
                     </div>
                    
                 </div> <!-- /.row -->
-                <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+                <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
             </div>
           </div><!-- /# column -->
         </div>

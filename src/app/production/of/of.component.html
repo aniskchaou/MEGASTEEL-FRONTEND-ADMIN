@@ -26,54 +26,29 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td class="serial">63GT</td>
-                        <td class="serial">12</td>
-                        <td class="serial">231</td>
-                        <td class="serial">ED3VS</td>
-                        <td class="serial">2ACE4</td>
-                        <td class="serial">4CVD2</td>
-                        <td class="serial"><span class="badge badge-success">Planifié</span></td>
-                        <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                          <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
-                          <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                          <td class="serial">74DC</td>
-                          <td class="serial">11</td>
-                          <td class="serial">23</td>
-                          <td class="serial">ED3VS</td>
-                          <td class="serial">213E</td>
-                          <td class="serial">3D44</td>
-                          <td class="serial"><span class="badge badge-warning">Démarré</span></td>
-                          <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                         <tr *ngFor="let o of ofs">
+                          <td class="serial">{{o.codeOF}}</td>
+                          <td class="serial">{{o.quantiteRealise}}</td>
+                          <td class="serial">{{o.quantiteRestant}}</td>
+                          <td class="serial">{{o.codeMachine}}</td>
+                          <td class="serial">{{o.articleEntrant}}</td>
+                          <td class="serial">{{o.articleSortant}}</td>
+                          <td class="serial"><span class="badge badge-warning">{{o.etat}}</span></td>
+                          <td class="serial">
+                            <a class="btn btn-warning btn-sm" routerLink="/editer-of/{{o.id}}" role="button"><i class="fa fa-edit"></i></a>
                             <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
+
                           </td>
-                        </tr>
-                        <tr>
-                            <td class="serial">9FNC</td>
-                            <td class="serial">44</td>
-                            <td class="serial">88</td>
-                            <td class="serial">3DBC</td>
-                            <td class="serial">2DJC</td>
-                            <td class="serial">2DPC</td>
-                            <td class="serial"><span class="badge badge-danger">Terminé</span> </td>
-                            <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                              <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
-                              <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
-                            </td>
-                          </tr>
-  
+                         </tr>
                     </tbody>
                   </table>
+                 
                  <!-- /.table-stats -->
               </div>
             </div>
   
           </div> <!-- /.row -->
-          <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+          <div class="card-footer"><a class="btn btn-success" (click)="redirectAddOf()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
         </div>
       </div><!-- /# column -->
     </div>

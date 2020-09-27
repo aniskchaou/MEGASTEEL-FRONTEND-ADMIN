@@ -20,20 +20,17 @@
                                           <th>Durée de fonctionnement</th>
                                           <th>Temps d'arret</th>
                                           <th>Etat</th>
-                                          <th></th>         
+                                               
                                       </tr>
                                   </thead>
                                   <tbody>
-                                      <tr>
-                                          <td class="serial">2EDCRT</td>
-                                          <td class="serial">1994 </td>
-                                          <td>5</td>
-                                          <td class="serial">7</td>
-                                          <td class="serial"> <span class="badge badge-success">Active</span></td>
-                                          <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                                            <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
-                                            <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
-                                          </td>
+                                      <tr *ngFor="let m of machines">
+                                          <td class="serial">{{m.nom}}</td>
+                                          <td class="serial">{{m.production}} </td>
+                                          <td>{{m.fonctionnement}}</td>
+                                          <td class="serial">{{m.tempsArret}}</td>
+                                          <td class="serial"> <span class="badge badge-success">{{m.etat}}</span></td>
+                                        
                                           
                                       </tr>
                                    
@@ -44,7 +41,7 @@
                     </div>
                    
                 </div> <!-- /.row -->
-                <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+                <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
             </div>
           </div><!-- /# column -->
         </div>

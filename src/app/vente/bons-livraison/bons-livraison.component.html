@@ -24,14 +24,14 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="serial">2ED4Z2</td>
-                            <td class="serial">3DZ2</td>
-                            <td class="serial">2DD2</td>
-                            <td class="serial">12</td>
-                            <td>27/03/2017</td>
-                            <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                              <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                          <tr *ngFor="let l of livraisons">
+                            <td class="serial">{{l.codeCommande}}</td>
+                            <td class="serial">{{l.codeArticle}}</td>
+                            <td class="serial">{{l.codeClient}}</td>
+                            <td class="serial">{{l.quantite}}</td>
+                            <td>{{l.date}}</td>
+                            <td>
+                              <a class="btn btn-warning btn-sm" routerLink="/editer-bon-livraison/{{l.id}}" role="button"><i class="fa fa-edit"></i></a>
                               <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
                             </td>
                           </tr>
@@ -43,7 +43,7 @@
                 </div>
       
               </div> <!-- /.row -->
-              <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+              <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
             </div>
           </div><!-- /# column -->
         </div>

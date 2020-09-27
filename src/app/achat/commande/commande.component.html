@@ -24,13 +24,13 @@
                                   </tr>
                               </thead>
                               <tbody>
-                                  <tr>
-                                      <td class="serial">7RVT</td>
-                                      <td class="serial">12/11/2017</td>
-                                      <td class="serial">01/03/2018</td>
-                                      <td class="serial"><span class="badge badge-warning">Planifiée</span></td>
-                                      <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                                        <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                                  <tr *ngFor="let c of commandes">
+                                      <td class="serial">{{c.numCommande}}</td>
+                                      <td class="serial">{{c.dateCreation}}</td>
+                                      <td class="serial">{{c.dateLimite}}</td>
+                                      <td class="serial"><span class="badge badge-warning">{{c.etat}}</span></td>
+                                      <td>
+                                        <a class="btn btn-warning btn-sm" routerLink="editer-commande/" role="button"><i class="fa fa-edit"></i></a>
                                         <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
                                       </td>
                                   </tr>
@@ -42,7 +42,7 @@
                 </div>
                
             </div> <!-- /.row -->
-            <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+            <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
         </div>
       </div><!-- /# column -->
     </div>

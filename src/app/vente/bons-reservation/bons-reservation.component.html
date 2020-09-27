@@ -24,14 +24,14 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="serial">2ED4Z2</td>
-                            <td class="serial">3D3D</td>
-                            <td class="serial">3D4F4</td>
-                            <td class="serial">23/06/2017</td>
+                          <tr *ngFor="let r of reservations"> 
+                            <td class="serial">{{r.codeCommande}}</td>
+                            <td class="serial">{{r.codeArticle}}</td>
+                            <td class="serial">{{r.codeClient}}</td>
+                            <td class="serial">{{r.quantite}}</td>
                             <td>5</td>
-                            <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                              <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                            <td>
+                              <a class="btn btn-warning btn-sm" routerLink="/editer-bon-reservation/{{r.id}}" role="button"><i class="fa fa-edit"></i></a>
                               <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
                             </td>
                           </tr>
@@ -44,7 +44,7 @@
                 </div>
       
               </div> <!-- /.row -->
-              <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+              <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
             </div>
           </div><!-- /# column -->
         </div>

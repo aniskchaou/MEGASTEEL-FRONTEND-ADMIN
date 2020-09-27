@@ -24,15 +24,15 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td class="serial">2EZS</td>
-                      <td class="serial">U</td>
-                      <td class="serial">1341</td>
-                      <td class="serial">1920</td>
-                      <td class="serial">23</td>
-                      <td class="serial">5.2</td>
-                      <td><a class="btn btn-primary btn-sm" href="#" role="button"><i class="fa fa-eye"></i></a>
-                        <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fa fa-edit"></i></a>
+                    <tr *ngFor="let a of articles">
+                      <td class="serial">{{a.code}}</td>
+                      <td class="serial">{{a.unite}}</td>
+                      <td class="serial">{{a.hauteur}}</td>
+                      <td class="serial">{{a.largeur}}</td>
+                      <td class="serial">{{a.dimension}}</td>
+                      <td class="serial">{{a.poids}}</td>
+                      <td>
+                        <a class="btn btn-warning btn-sm" routerLink="/editer-article/{{a.id}}" role="button"><i class="fa fa-edit"></i></a>
                         <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
                       </td>
                     </tr>
@@ -43,7 +43,7 @@
           </div>
 
         </div> <!-- /.row -->
-        <div class="card-footer"><a class="btn btn-success" href="#" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+        <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
       </div>
     </div><!-- /# column -->
   </div>
