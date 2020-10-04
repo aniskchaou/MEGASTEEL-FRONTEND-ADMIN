@@ -26,20 +26,27 @@
                       </tr>
                     </thead>
                     <tbody>
-                         <tr *ngFor="let o of ofs">
-                          <td class="serial">{{o.codeOF}}</td>
-                          <td class="serial">{{o.quantiteRealise}}</td>
-                          <td class="serial">{{o.quantiteRestant}}</td>
-                          <td class="serial">{{o.codeMachine}}</td>
-                          <td class="serial">{{o.articleEntrant}}</td>
-                          <td class="serial">{{o.articleSortant}}</td>
-                          <td class="serial"><span class="badge badge-warning">{{o.etat}}</span></td>
-                          <td class="serial">
-                            <a class="btn btn-warning btn-sm" routerLink="/editer-of/{{o.id}}" role="button"><i class="fa fa-edit"></i></a>
-                            <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
-
-                          </td>
-                         </tr>
+                      <div  style="position: absolute;left: 40%" *ngIf="loading==true;else other_content "><b>Chargement...</b></div>
+                        
+                      <ng-template #other_content>
+                        
+                          <tr *ngFor="let o of ofs">
+                              <td class="serial">{{o.codeOF}}</td>
+                              <td class="serial">{{o.quantiteRealise}}</td>
+                              <td class="serial">{{o.quantiteRestant}}</td>
+                              <td class="serial">{{o.codeMachine}}</td>
+                              <td class="serial">{{o.articleEntrant}}</td>
+                              <td class="serial">{{o.articleSortant}}</td>
+                              <td class="serial"><span class="badge badge-warning">{{o.etat}}</span></td>
+                              <td class="serial">
+                                <a class="btn btn-warning btn-sm" routerLink="/editer-of/{{o.id}}" role="button"><i class="fa fa-edit"></i></a>
+                                <a class="btn btn-danger btn-sm" routerLink="/supprimer-of/delete/{{o.id}}" role="button"><i class="fa fa-trash"></i></a>
+    
+                              </td>
+                             </tr>
+                      </ng-template>
+                      
+                      
                     </tbody>
                   </table>
                  

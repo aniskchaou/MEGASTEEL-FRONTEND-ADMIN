@@ -15,8 +15,16 @@
                 <div class="form-group row">
                   <label for="codeOF" class="col-4 col-form-label">Code OF</label>
                   <div class="col-8">
-                    <input id="codeOF" formControlName="codeOF" name="codeOF" type="text" class="form-control">
+                    <input id="codeOF" formControlName="codeOF" name="codeOF" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.codeOF.errors }">
+                   
+                    <div *ngIf="submitted && f.codeOF.errors" class="alert alert-danger">
+                      <div *ngIf="submitted && f.codeOF.errors.required">Code Of est requis</div>
+                    </div>
+
                   </div>
+                
+                
+
                 </div>
                 <div class="form-group row">
                   <label for="articleEntrant" class="col-4 col-form-label">Article entrant</label>
@@ -41,13 +49,19 @@
                 <div class="form-group row">
                   <label for="qteRealise" class="col-4 col-form-label">Quantité realisé</label>
                   <div class="col-8">
-                    <input id="qteRealise" formControlName="quantiteRealise" name="qteRealise" type="text" class="form-control">
+                    <input id="qteRealise" formControlName="quantiteRealise" name="qteRealise" type="number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantiteRealise.errors }">
+                    <div *ngIf="submitted && f.quantiteRealise.errors" class="alert alert-danger">
+                      <div *ngIf="submitted && f.quantiteRealise.errors.required">Quantité realisé est requis</div>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="qteRestant" class="col-4 col-form-label">Quantité restant</label>
                   <div class="col-8">
-                    <input id="qteRestant" formControlName="quantiteRestant"  name="qteRestant" type="text" class="form-control">
+                    <input id="qteRestant" formControlName="quantiteRestant"  name="qteRestant" type="number" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.quantiteRestant.errors }">
+                    <div *ngIf="submitted && f.quantiteRestant.errors" class="alert alert-danger">
+                      <div *ngIf="submitted && f.quantiteRestant.errors.required">Quantité restant est requis</div>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group row">

@@ -16,10 +16,18 @@
                 <div class="form-group">
                   <label for="code">Code</label> 
                   <input id="code" name="code" formControlName="code" type="text" class="form-control">
+                  
+                  <div *ngIf="submitted && f.code.errors" class="alert alert-danger">
+                    <div *ngIf="submitted && f.code.errors.required">Title is required</div>
+                  </div>
+               
                 </div>
                 <div class="form-group">
                   <label for="unite">Unité par defaut</label> 
                   <input id="unite" name="unite" formControlName="unite" type="text" class="form-control">
+                  <div *ngIf="submitted && f.unite.errors" class="alert alert-danger">
+                    <div *ngIf="submitted && f.unite.errors.required">Title is required</div>
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="text">Hauteur</label> 
@@ -28,19 +36,37 @@
                     <div class="input-group-append">
                       <div class="input-group-text">m</div>
                     </div>
+                   
+                    <div *ngIf="submitted && f.hauteur.errors" class="alert alert-danger">
+                      <div *ngIf="submitted && f.hauteur.errors.required">Title is required</div>
+                    </div>
+                  
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="largeur">Largeur</label> 
                   <input id="largeur" formControlName="largeur" name="largeur" type="text" class="form-control">
+                  <div *ngIf="submitted && f.largeur.errors" class="alert alert-danger">
+                    <div *ngIf="submitted && f.largeur.errors.required">Title is required</div>
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="dimension">Dimension</label> 
                   <input id="dimension" formControlName="dimension" name="dimension" type="text" class="form-control">
+                  
+                  <div *ngIf="submitted && f.dimension.errors" class="alert alert-danger">
+                    <div *ngIf="submitted && f.dimension.errors.required">Title is required</div>
+                  </div>
+                
                 </div>
                 <div class="form-group">
                   <label for="poids">Poids unitaire</label> 
                   <input id="poids"  formControlName="poids" name="poids" type="text" class="form-control">
+                  
+                  <div *ngIf="submitted && f.poids.errors" class="alert alert-danger">
+                    <div *ngIf="submitted && f.poids.errors.required">Title is required</div>
+                  </div>
+                
                 </div> 
                 <div class="form-group">
                   <button name="submit" type="submit" class="btn btn-primary">Créer</button>

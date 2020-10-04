@@ -1,5 +1,6 @@
+import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,19 +13,23 @@ export class OfService {
   public host: string = "https://pfe2017-spring.herokuapp.com/of";
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private router:Router) {
 
   }
 
   
-  creer(formData) {
+  async creer(formData) {
     
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(formData);
     console.log(this.host+"/create");
-    this.http.post(this.host+"/create",  body,{'headers':headers}).subscribe(data=>{
-      console.log(data);
-    });
+    await this.http.post(this.host+"/create",  body,{'headers':headers}).toPromise();
+    this.redirectTo("/of");
+  }
+
+  redirectTo(uri:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+    this.router.navigate([uri]));
   }
 
   tous() {
@@ -36,8 +41,13 @@ export class OfService {
   }
 
   
-  supprimer(id) {
-    return this.http.get(this.host);
+   async supprimer(id) {
+    // return this.http.delete(this.host+"/delete/"+id);
+    //this.router.navigateByUrl("/of");
+       await this.http.delete(this.host+"/delete/"+id, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  }).toPromise();
+ 
   }
 
  

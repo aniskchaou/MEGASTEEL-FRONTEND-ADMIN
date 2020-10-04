@@ -1,3 +1,4 @@
+import { ZoneStockageComponent } from './production/zone-stockage/zone-stockage.component';
 import { EditerArticleComponent } from './achat/editer-article/editer-article.component';
 import { EditerBonEntreeAchatComponent } from './achat/editer-bon-entree-achat/editer-bon-entree-achat.component';
 import { EditerFournisseurComponent } from './achat/editer-fournisseur/editer-fournisseur.component';
@@ -66,6 +67,15 @@ import {APP_BASE_HREF} from '@angular/common';
 import { NotificationComponent } from './shared/notification/notification.component';
 import { MessageComponent } from './shared/message/message.component';
 import { UserComponent } from './shared/user/user.component';
+import { EmployeesComponent } from './rh/employees/employees.component';
+import { FichePaieComponent } from './rh/fiche-paie/fiche-paie.component';
+import { PointageComponent } from './rh/pointage/pointage.component';
+import { CongeComponent } from './rh/conge/conge.component';
+import { LicencimentComponent } from './rh/licenciment/licenciment.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur/utilisateur.component';
+import { GroupeComponent } from './utilisateur/groupe/groupe.component';
+import { PriviligeComponent } from './utilisateur/privilige/privilige.component';
+import { OfStatistiqueComponent } from './statistique/of-statistique/of-statistique.component';
 
 const routes:Routes=[
   {path:'',component:DashboardComponent},
@@ -128,6 +138,19 @@ const routes:Routes=[
   {path:'editer-bon-entree-achat/:id',component:EditerBonEntreeAchatComponent},
   {path:'editer-fournisseur/:id',component:EditerFournisseurComponent},
   {path:'editer-article/:id',component:EditerArticleComponent},
+  {path:'supprimer-of/:action/:id',component:OfComponent},
+  {path:'zone-stockage',component:ZoneStockageComponent},
+  {path:'pointage',component:PointageComponent},
+  {path:'licenciement',component:LicencimentComponent},
+  {path:'employees',component:EmployeesComponent},
+  {path:'fiche-de-paie',component:FichePaieComponent},
+  {path:'conges',component:CongeComponent},
+  {path:'groupes',component:GroupeComponent},
+  {path:'utilisateurs',component:UtilisateurComponent},
+  {path:'privileges',component:PriviligeComponent},
+  {path:'notifications',component:NotificationComponent},
+  {path:'messages',component:MessageComponent},
+  {path:'statistique-of',component:OfStatistiqueComponent},
 ];
 
 @NgModule({
@@ -142,6 +165,15 @@ const routes:Routes=[
     NotificationComponent,
     MessageComponent,
     UserComponent,
+    EmployeesComponent,
+    FichePaieComponent,
+    PointageComponent,
+    CongeComponent,
+    LicencimentComponent,
+    UtilisateurComponent,
+    GroupeComponent,
+    PriviligeComponent,
+    OfStatistiqueComponent,
     
   ],
   imports: [

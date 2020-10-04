@@ -20,13 +20,12 @@ export class AjouterArticleComponent implements OnInit {
 
  createFormGroup() {
    return new FormGroup({
-     codeOF: new FormControl(''),
-     articleEntrant : new FormControl(),
-     articleSortant : new FormControl(),
-     quantiteRealise : new FormControl(''),
-     quantiteRestant : new FormControl(''),
-     codeMachine : new FormControl(),
-     etat : new FormControl()
+     code: new FormControl(''),
+     unite : new FormControl(),
+     hauteur : new FormControl(),
+     largeur : new FormControl(''),
+     dimension : new FormControl(''),
+     poids : new FormControl()
    })
  }
 

@@ -1,7 +1,7 @@
 import { OfService } from './../services/of.service';
 import { Of } from './../models/of.model';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-editer-of',
@@ -11,13 +11,25 @@ import { ActivatedRoute } from '@angular/router';
 export class EditerOfComponent implements OnInit {
 
   model
-  constructor(private route:ActivatedRoute,private ofService:OfService) { }
-  
+  show=false;
+  constructor(private route:ActivatedRoute,private router:Router,private ofService:OfService) {
+    this.show=false;
+    
+      this.show=true;
+      this.ofService.editer(this.route.snapshot.paramMap.get('id')).subscribe(data=>{
+        this.model=data;
+        console.log(this.model);
+       })
+
+       
+    
+   }
+   redirectTo(uri:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+    this.router.navigate([uri]));
+ }
   ngOnInit() {
-   this.ofService.editer(this.route.snapshot.paramMap.get('id')).subscribe(data=>{
-    this.model=data;
-    console.log(this.model);
-   })
+   
    
   }
 

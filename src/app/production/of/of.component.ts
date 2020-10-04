@@ -3,7 +3,8 @@ import { OfService } from './../services/of.service';
 import {FormGroup} from '@angular/forms';
 import { Of } from './../models/of.model';
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-of',
@@ -13,34 +14,47 @@ import {Router} from '@angular/router';
 export class OfComponent implements OnInit {
    
    ofs;
+   loading=true
+  constructor(private route:ActivatedRoute,private router: Router,private ofService:OfService) {
    
-  constructor(private router: Router,private ofService:OfService) {
-   }
-    
+  }
+
+  redirectTo(uri:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+    this.router.navigate([uri]));
+  }
 
   ngOnInit() {
     this.ofService.tous().subscribe(data=>{
       this.ofs=data;
+      this.loading=false;
+    })
+
+
+    const action=this.route.snapshot.paramMap.get('action')
+    console.log(action);
+    if(action==="delete")
+    {
+      const res=   this.ofService.supprimer(this.route.snapshot.paramMap.get('id'));
+      this.redirectTo("/of");
+    }
+
+    
+  }
+ 
+  ngOnChanges()
+  {
+   
+    this.ofService.tous().subscribe(data=>{
+      this.ofs=data;
+      this.loading=false;
     })
   }
 
   redirectAddOf()
   {
     this.router.navigateByUrl("/ajouter-of");
-   /* let ofModel=new Of(1,"qe","qd,","fq","zqd","zqd","qd","dz");
-    this.ofs.push(ofModel);
-    this.ofs.push(ofModel);
-    this.ofs.push(ofModel);
-    this.ofs.push(ofModel);*/
   }
 
-  redirectEditerOf()
-  {
-    this.router.navigateByUrl("/editer-of/2");
-  }
-
-  redirectSupprimerOf()
-  {
-    this.router.navigateByUrl("/ajouter-of");
-  }
+  
 }

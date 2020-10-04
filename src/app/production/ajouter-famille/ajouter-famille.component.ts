@@ -11,6 +11,7 @@ export class AjouterFamilleComponent implements OnInit {
 
   
  ofForm:FormGroup;
+  submitted: boolean=false;
  constructor(private ofService:OfService) {this.ofForm=this.createFormGroup(); }
 
  ngOnInit() {
@@ -29,9 +30,15 @@ export class AjouterFamilleComponent implements OnInit {
    })
  }
 
- onSubmit(){
-   console.log(this.ofForm.value)
-   this.ofService.creer(this.ofForm.value);
- }
+ get f() { return this.ofForm.controls; }
+  
+  onSubmit(){
+    this.submitted = true;
+    if (this.ofForm.invalid) {
+      return;
+  }
+    console.log(this.ofForm.value)
+    this.ofService.creer(this.ofForm.value);
+  }
 
 }

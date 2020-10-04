@@ -17,7 +17,10 @@
               <form [formGroup]="ofForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                   <label for="nomFamille">Nom de la Famille</label> 
-                  <input id="nomFamille" formControlName="nomFamille" name="nomFamille" type="text" class="form-control">
+                  <input id="nomFamille" formControlName="nomFamille" name="nomFamille" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nomFamille.errors }">
+                  <div *ngIf="submitted && f.nomFamille.errors" class="alert alert-danger">
+                    <div *ngIf="submitted && f.nomFamille.errors.required">Title is required</div>
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="articleEntrant">Article Entrant</label> 
@@ -41,11 +44,17 @@
                 </div>
                 <div class="form-group">
                   <label for="nombreArticle">Nombre Article</label> 
-                  <input id="nombreArticle" formControlName="nombreArticle" name="nombreArticle" type="text" class="form-control">
+                  <input id="nombreArticle" formControlName="nombreArticle" name="nombreArticle" type="number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombreArticle.errors }">
+                  <div *ngIf="submitted && f.nombreArticle.errors" class="alert alert-danger">
+                    <div *ngIf="submitted && f.nombreArticle.errors.required">Title is required</div>
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="nombreMachine">Nombre Machine</label> 
-                  <input id="nombreMachine" formControlName="nombreMachine" name="nombreMachine" type="text" class="form-control">
+                  <input id="nombreMachine" formControlName="nombreMachine" name="nombreMachine" type="number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombreMachine.errors }">
+                  <div *ngIf="submitted && f.nombreMachine.errors" class="alert alert-danger">
+                    <div *ngIf="submitted && f.nombreMachine.errors.required">Title is required</div>
+                  </div>
                 </div> 
                 <div class="form-group">
                   <button name="submit" type="submit" class="btn btn-primary">Créer Famille</button>

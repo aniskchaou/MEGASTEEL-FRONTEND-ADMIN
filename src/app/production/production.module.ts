@@ -19,9 +19,10 @@ import { AjouterActiviteComponent } from './ajouter-activite/ajouter-activite.co
 import { AjouterBonEntreeFabricationComponent } from './ajouter-bon-entree-fabrication/ajouter-bon-entree-fabrication.component';
 import { AjouterFamilleComponent } from './ajouter-famille/ajouter-famille.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ZoneStockageComponent } from './zone-stockage/zone-stockage.component';
 
 @NgModule({
-  declarations: [OfComponent, BonEntreeFabricationComponent, FamilleComponent, ActiviteComponent, VoirActiviteComponent, VoirBonEntreeFabricationComponent, VoirFamilleComponent, VoirOfComponent, EditerActiviteComponent, EditerBonEntreeFabricationComponent, EditerFamilleComponent, EditerOfComponent, AjouterOfComponent, AjouterActiviteComponent, AjouterBonEntreeFabricationComponent, AjouterFamilleComponent],
+  declarations: [OfComponent, BonEntreeFabricationComponent, FamilleComponent, ActiviteComponent, VoirActiviteComponent, VoirBonEntreeFabricationComponent, VoirFamilleComponent, VoirOfComponent, EditerActiviteComponent, EditerBonEntreeFabricationComponent, EditerFamilleComponent, EditerOfComponent, AjouterOfComponent, AjouterActiviteComponent, AjouterBonEntreeFabricationComponent, AjouterFamilleComponent, ZoneStockageComponent],
   imports: [
     CommonModule,RouterModule,FormsModule,ReactiveFormsModule,HttpClientModule
   ]
