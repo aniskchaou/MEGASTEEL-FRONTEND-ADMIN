@@ -26,6 +26,9 @@
                                       </tr>
                                   </thead>
                                   <tbody>
+                                        <div  style="position: absolute;left: 40%" *ngIf="loading==true;else other_content "><b>Chargement...</b></div>
+                        
+                                        <ng-template #other_content>
                                       <tr *ngFor="let o of operateurs">
                                           <td class="serial">{{o.code}}</td>
                                           <td class="serial">{{o.nom}} </td>
@@ -36,7 +39,7 @@
                                         
                                           
                                       </tr>
-                                   
+                                    </ng-template>
                                   </tbody>
                               </table>
                           

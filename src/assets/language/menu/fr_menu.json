@@ -1,0 +1,14 @@
+{
+    "module_1":{
+        "name":"Production",
+        "menu":{
+            "menu_1":{
+                "name":"Production",    
+                "item_1":"OF",
+                "item_2":"Activités",
+                "item_3":"Opérateurs",
+                "item_4":"Commandes"
+            }
+        }
+    }
+}

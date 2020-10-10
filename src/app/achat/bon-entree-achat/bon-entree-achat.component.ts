@@ -10,11 +10,13 @@ import { Route, Router } from '@angular/router';
 export class BonEntreeAchatComponent implements OnInit {
 
   achats;
+  loading: boolean=true;
   constructor(private router:Router,private bonEntreeAchatService:BonEntreeAchatService) { }
  
   ngOnInit() {
     this.bonEntreeAchatService.tous().subscribe(data=>{
       this.achats=data;
+      this.loading=false;
     })
   }
 

@@ -1,0 +1,14 @@
+{
+    "module_1":{
+        "name":"Produktion",
+        "menu":{
+            "menu_1":{
+                "name":"Produktion",    
+                "item_1":"Fertigungsauftrag",
+                "item_2":"Aktivitäten",
+                "item_3":"Betreiber",
+                "item_4":"Aufträge"
+            }
+        }
+    }
+}

@@ -12,12 +12,14 @@ import { MachineService } from '../services/machine.service';
 export class MachineComponent implements OnInit {
   
   machines;
+  loading: boolean=true;
   constructor(private router:Router,
     private machineService:MachineService) { }
 
   ngOnInit() {
     this.machineService.tous().subscribe(data=>{
       this.machines=data;
+      this.loading=false;
     })
   }
   redirectAjouter()

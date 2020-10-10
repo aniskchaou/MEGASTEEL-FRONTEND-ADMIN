@@ -24,6 +24,9 @@
                     </tr>
                   </thead>
                   <tbody>
+                      <div  style="position: absolute;left: 40%" *ngIf="loading==true;else other_content "><b>Chargement...</b></div>
+                        
+                      <ng-template #other_content>
                     <tr *ngFor="let a of articles">
                       <td class="serial">{{a.code}}</td>
                       <td class="serial">{{a.unite}}</td>
@@ -36,6 +39,7 @@
                         <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
                       </td>
                     </tr>
+                    </ng-template>
                   </tbody>
                 </table>
              

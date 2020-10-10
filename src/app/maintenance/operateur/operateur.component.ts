@@ -10,12 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class OperateurComponent implements OnInit {
 
   operateurs
+  loading=true;
   constructor(private router:Router,
     private operateurService:OperateurService) { }
 
   ngOnInit() {
     this.operateurService.tous().subscribe(data=>{
       this.operateurs=data;
+      this.loading=false;
     })
   }
   redirectAjouter()

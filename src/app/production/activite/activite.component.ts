@@ -10,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class ActiviteComponent implements OnInit {
 
   activites
+  loading: boolean=true;
   constructor(private router:Router,private activiteService:ActiviteService) { }
 
   ngOnInit() {
     this.activiteService.tous().subscribe(data=>{
       this.activites=data;
+      this.loading=false;
     })
   }
 

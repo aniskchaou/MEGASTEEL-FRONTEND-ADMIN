@@ -9,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BonsReservationComponent implements OnInit {
   reservations
+  loading: boolean=true;
   constructor(private router:Router,private bonReservationService:BonReservationService) { }
 
   ngOnInit() {
     this.bonReservationService.tous().subscribe(data=>{
       this.reservations=data;
+      this.loading=false;
     })
   }
 

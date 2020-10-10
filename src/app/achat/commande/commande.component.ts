@@ -10,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class CommandeComponent implements OnInit {
 
   commandes;
+  loading: boolean=true;
   constructor(private router:Router,private commandeService:CommandeService) { }
 
   ngOnInit() {
     this.commandeService.tous().subscribe(data=>{
       this.commandes=data;
+      this.loading=false;
    
     })
   }

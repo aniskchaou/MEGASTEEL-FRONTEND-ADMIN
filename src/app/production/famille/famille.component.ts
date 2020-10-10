@@ -10,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class FamilleComponent implements OnInit {
   
   familles
+  loading: boolean=true;
   constructor(private router:Router,private familleService:FamilleService) { }
 
   ngOnInit() {
     this.familleService.tous().subscribe(data=>{
       this.familles=data;
+      this.loading=false;
     })
   }
 

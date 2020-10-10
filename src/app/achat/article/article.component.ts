@@ -10,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class ArticleComponent implements OnInit {
 
   articles;
+  loading: boolean=true;
   constructor(private router:Router,private articleService:ArticleService) { }
 
   ngOnInit() {
     this.articleService.tous().subscribe(data=>{
       this.articles=data;
+      this.loading=false;
     })
   }
   redirectAjouter()

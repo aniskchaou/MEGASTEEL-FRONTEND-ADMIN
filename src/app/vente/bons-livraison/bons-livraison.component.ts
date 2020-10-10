@@ -11,11 +11,13 @@ import { Component, OnInit } from '@angular/core';
 export class BonsLivraisonComponent implements OnInit {
   
   livraisons
+  loading: boolean=true;
   constructor(private router:Router,private bonLivraisonService:BonLivraisonService) { }
 
   ngOnInit() {
     this.bonLivraisonService.tous().subscribe(data=>{
       this.livraisons=data;
+      this.loading=false;
     })
   }
 
