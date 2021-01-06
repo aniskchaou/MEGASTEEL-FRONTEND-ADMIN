@@ -2,8 +2,8 @@
 
 MegaSteel is an open-source integrated management software package comprising a large number of modules to meet many business management needs (ERP) for metal manufacturer companies.
 
-## Development server
-Modules:
+## Modules
+
 - Production
 - Purchases
 - Sales
@@ -15,3 +15,4 @@ Modules:
 - Last update: September 2020
 - Sector: industry
 - Latest version: 1.0
+- Status : in development
