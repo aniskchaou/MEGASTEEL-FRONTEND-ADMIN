@@ -1,21 +1,23 @@
 import { BonReservationService } from './../services/bon-reservation.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { URLLoader } from 'src/app/config/urls/URLLoader';
 
 @Component({
   selector: 'app-bons-reservation',
   templateUrl: './bons-reservation.component.html',
   styleUrls: ['./bons-reservation.component.css']
 })
-export class BonsReservationComponent implements OnInit {
+export class BonsReservationComponent extends URLLoader implements OnInit {
   reservations
   loading: boolean=true;
-  constructor(private router:Router,private bonReservationService:BonReservationService) { }
+  constructor(private router:Router,private bonReservationService:BonReservationService) { super() }
 
   ngOnInit() {
     this.bonReservationService.tous().subscribe(data=>{
       this.reservations=data;
       this.loading=false;
+      super.loadScripts()
     })
   }
 

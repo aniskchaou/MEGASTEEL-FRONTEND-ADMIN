@@ -1,22 +1,27 @@
 import { ActiviteService } from './../services/activite.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { URLLoader } from 'src/app/config/urls/URLLoader';
 
 @Component({
   selector: 'app-activite',
   templateUrl: './activite.component.html',
   styleUrls: ['./activite.component.css']
 })
-export class ActiviteComponent implements OnInit {
+export class ActiviteComponent extends URLLoader implements OnInit {
 
   activites
   loading: boolean=true;
-  constructor(private router:Router,private activiteService:ActiviteService) { }
+  constructor(private router:Router,private activiteService:ActiviteService) { 
+    super()
+  }
 
   ngOnInit() {
+    
     this.activiteService.tous().subscribe(data=>{
       this.activites=data;
       this.loading=false;
+      super.loadScripts()
     })
   }
 

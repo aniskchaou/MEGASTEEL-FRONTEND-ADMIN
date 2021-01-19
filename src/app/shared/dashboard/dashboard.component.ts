@@ -12,7 +12,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     var ctx = document.getElementById('myChart');
-    console.log(ctx);
+    var ctx2 = document.getElementById('family');
+
     var chart = new Chart(ctx, {
       // The type of chart we want to create
       type: 'line',
@@ -31,6 +32,27 @@ export class DashboardComponent implements OnInit {
       // Configuration options go here
       options: {}
     });
+
+   
+
+  var myChart = new Chart(ctx2, {
+    type: 'pie',
+    data: {
+        labels:  [
+          'Rond à béton',
+          'Fil machine',
+          'Armature'
+      ],
+        datasets: [{
+            label: '',
+            data: [10, 20, 30],
+            backgroundColor: ['red', 'blue','green'],
+            borderColor: 'white',
+        }]
+    },
+})
+
+
   }
 
 }

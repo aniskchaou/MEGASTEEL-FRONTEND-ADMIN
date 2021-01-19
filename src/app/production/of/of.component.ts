@@ -1,9 +1,10 @@
-import { OFService } from './../../achat/services/of.service';
+
 import { OfService } from './../services/of.service';
 import {FormGroup} from '@angular/forms';
 import { Of } from './../models/of.model';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { URLLoader } from 'src/app/config/urls/URLLoader';
 
 
 @Component({
@@ -11,23 +12,30 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './of.component.html',
   styleUrls: ['./of.component.css']
 })
-export class OfComponent implements OnInit {
+export class OfComponent extends URLLoader implements OnInit {
    
-   ofs;
+   ofs
    loading=true
+
+ 
+
   constructor(private route:ActivatedRoute,private router: Router,private ofService:OfService) {
-   
+   super()
   }
 
   redirectTo(uri:string){
+   
     this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
     this.router.navigate([uri]));
   }
 
   ngOnInit() {
+    
     this.ofService.tous().subscribe(data=>{
+      
       this.ofs=data;
       this.loading=false;
+      super.loadScripts();
     })
 
 

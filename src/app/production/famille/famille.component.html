@@ -10,8 +10,11 @@
           <div class="col-lg-12">
             <div class="card-body">
               <!-- <canvas id="TrafficChart"></canvas>   -->
-              
-                <table id="bootstrap-data-table" class="table table-striped table-bordered" >
+              <div style="position: absolute;left: 40%" *ngIf="loading==true;else other_content "><b>Chargement...</b>
+              </div>
+
+              <ng-template #other_content>
+                <table id="bootstrap-data-table" class="table table-striped table-bordered">
                   <thead>
                     <tr>
                       <th class="avatar">Nom</th>
@@ -23,9 +26,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                      <div  style="position: absolute;left: 40%" *ngIf="loading==true;else other_content "><b>Chargement...</b></div>
-                        
-                      <ng-template #other_content>
+
                     <tr *ngFor="let f of familles">
                       <td class="serial">{{f.nom}}</td>
                       <td class="serial">{{f.familleEntrant}}</td>
@@ -33,20 +34,22 @@
                       <td class="serial">{{f.nombreArticle}}</td>
                       <td class="serial">{{f.nombreMachine}}</td>
                       <td>
-                        <a class="btn btn-warning btn-sm" routerLink="/editer-famille/{{f.id}}" role="button"><i class="fa fa-edit"></i></a>
+                        <a class="btn btn-warning btn-sm" routerLink="/editer-famille/{{f.id}}" role="button"><i
+                            class="fa fa-edit"></i></a>
                         <a class="btn btn-danger btn-sm" href="#" role="button"><i class="fa fa-trash"></i></a>
                       </td>
                     </tr>
-                    </ng-template>
+
 
                   </tbody>
                 </table>
-              
+              </ng-template>
             </div>
           </div>
 
         </div> <!-- /.row -->
-        <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i class="fa fa-plus"></i> Créer</a></div>
+        <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i
+              class="fa fa-plus"></i> Créer</a></div>
       </div>
     </div><!-- /# column -->
   </div>
