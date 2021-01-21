@@ -11,7 +11,7 @@ import { URLLoader } from 'src/app/config/urls/URLLoader';
 export class FournisseurComponent extends URLLoader implements OnInit {
 
   fournisseurs;
-  constructor(private router:Router,private fournisseurService:FournisseurService) { }
+  constructor(private router:Router,private fournisseurService:FournisseurService) { super()}
 
   ngOnInit() {
     this.fournisseurService.tous().subscribe(data=>{
