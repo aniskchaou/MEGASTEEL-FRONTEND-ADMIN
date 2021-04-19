@@ -1,0 +1,53 @@
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="box-title">Entreprise</h4>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Nom Entreprise</th>
+                    <th>Email Entreprise</th>
+                    <th>Time Zone</th>
+                    <th>Date format</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{entreprise_config.company_name}}</td>
+                    <td>{{entreprise_config.company_email}}</td>
+                    <td>{{entreprise_config.time_zone}}</td>
+                    <td>{{entreprise_config.date_format}}</td>
+                    <td>
+                      <button type="button" data-toggle="modal" class="btn btn-success btn-sm"><i
+                          class="fa fa-edit"></i></button>
+
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Nom</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Solde</th>
+                    <th>Actions</th>
+                  </tr>
+                </tfoot>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

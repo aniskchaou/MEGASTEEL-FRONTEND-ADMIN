@@ -1,13 +1,16 @@
 <!-- Left Panel -->
-<aside id="left-panel" class="left-panel">
+<aside id="left-panel" class="left-panel" *ngIf="!hasRoute('login')">
     <navigation></navigation>
 </aside>
 <!-- /#left-panel -->
+
 <!-- Right Panel -->
-<div id="right-panel" class="right-panel">
+<div id="right-panel" class="right-panel" *ngIf="!hasRoute('login')">
     <!-- Header-->
     <menu></menu>
     <!-- /#header -->
+
+
     <!-- Content -->
     <div class="content">
         <!-- Animated -->
@@ -15,3 +18,6 @@
     </div>
     <footer></footer>
 </div>
+
+
+<app-login *ngIf="hasRoute('login')"></app-login>

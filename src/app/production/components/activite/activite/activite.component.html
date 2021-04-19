@@ -1,0 +1,66 @@
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="box-title">Activités </h4>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-body">
+              <!-- <canvas id="TrafficChart"></canvas>   -->
+
+              <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th class="avatar">Nom</th>
+                    <th>Famille entrant</th>
+                    <th>Famille sortant</th>
+                    <th>Nombre d'Article</th>
+                    <th>Nombre Machine</th>
+                    <th></th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <div style="position: absolute;left: 40%" *ngIf="loading==true;else other_content ">
+                    <b>Chargement...</b>
+                  </div>
+
+                  <ng-template #other_content>
+
+                    <tr *ngFor="let a of activites">
+                      <td class="serial">{{a.nom}}</td>
+                      <td class="serial">{{a.familleEntrant}}</td>
+                      <td class="serial">{{a.familleSortant}}</td>
+                      <td class="serial">{{a.nombreArticle}}</td>
+                      <td class="serial">{{a.nombreMachine}}</td>
+                      <td>
+                        <button class="btn btn-warning btn-sm" routerLink="/editer-activite/{{a.id}}" role="button"><i
+                            class="fa fa-edit"></i></button>
+                        <button (click)="delete(a.nom,a.id)" class="btn btn-danger btn-sm" role="button"><i
+                            class="fa fa-trash"></i></button>
+                      </td>
+
+                    </tr>
+                  </ng-template>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+        </div> <!-- /.row -->
+        <div class="card-footer"><a class="btn btn-success" (click)="redirectAjouter()" role="button"><i
+              class="fa fa-plus"></i> Créer</a></div>
+      </div>
+    </div><!-- /# column -->
+  </div>
+  <!--  /Traffic -->
+  <div class="clearfix"></div>
+  <!-- Orders -->
+
+
+
+</div>

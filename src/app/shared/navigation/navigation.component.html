@@ -7,13 +7,15 @@
             <li class="menu-title">{{langData.module_1.name}}</li><!-- /.menu-title -->
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="menu-icon fa fa-puzzle-piece"></i>  {{langData.module_1.menu.menu_1.name}}</a>
+                    <i class="menu-icon fa fa-puzzle-piece"></i> {{langData.module_1.menu.menu_1.name}}</a>
                 <ul class="sub-menu children dropdown-menu">
-                    <li><a routerLink="/of">{{langData.module_1.menu.menu_1.item_1}} <span class="badge badge-warning">1</span></a> </li>
+                    <li><a routerLink="/of">{{langData.module_1.menu.menu_1.item_1}} <span
+                                class="badge badge-warning">1</span></a> </li>
                     <li><a routerLink="/activites">{{langData.module_1.menu.menu_1.item_2}}</a></li>
                     <li><a routerLink="/operateurs">{{langData.module_1.menu.menu_1.item_3}}</a></li>
 
-                    <li><a routerLink="/commandes">{{langData.module_1.menu.menu_1.item_4}} <span class="badge badge-primary">1</span> </a>  </li>
+                    <li><a routerLink="/commandes">{{langData.module_1.menu.menu_1.item_4}} <span
+                                class="badge badge-primary">1</span> </a> </li>
                     <li><a routerLink="/bon-entree-fabrication">Bons entrées
                             fabrication</a></li>
                 </ul>
@@ -30,8 +32,8 @@
                 </ul>
             </li>
 
-    
-          
+
+
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="menu-icon fa fa-cog"></i>Configuration</a>
@@ -39,24 +41,28 @@
                     <li><a href="/zone-stockage">Zone de stockage</a></li>
                 </ul>
             </li>
-     
+
 
             <li class="menu-title">Achats</li><!-- /.menu-title -->
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="menu-icon fa fa-shopping-cart"></i>Achats</a>
                 <ul class="sub-menu children dropdown-menu">
-                   <!-- <li><a routerLink="/demande-achat">Demandes d'achats</a></li>
-                    <li><a routerLink="/commandes-fournisseur">Commandes F <span class="badge badge-warning">1</span> </a></li>-->
+                    <li><a routerLink="/demande-achat">Demandes d'achats</a></li>
+                    <li><a routerLink="/commandes-fournisseur">Commandes F <span class="badge badge-warning">1</span>
+                        </a></li>
                     <li><a routerLink="/bon-entree-achat">Bons entrées achat</a></li>
                     <li><a routerLink="/fournisseurs">Fournisseurs</a></li>
-                   <!-- <li><i class="menu-icon fa fa-paper-plane"></i><a href="/demande-achat">demande d'achat pièces</a></li>
-                  
-                    
-                    <li><i class="menu-icon fa fa-paper-plane"></i><a href="/fournisseurs-pieces">fournisseurs pièces</a></li>
-                    <li><i class="menu-icon fa fa-paper-plane"></i><a href="/bon-entree-pieces">Bons entrées pièces</a></li>
-                    ---->
-              
+                    <li><a href="/demande-achat">demande d'achat pièces</a>
+                    </li>
+
+
+                    <li><a href="/fournisseurs-pieces">fournisseurs de
+                            pièces</a></li>
+                    <li><a href="/bon-entree-pieces">Bons entrées pièces</a>
+                    </li>
+
+
                 </ul>
             </li>
 
@@ -96,12 +102,13 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="menu-icon fa fa-wrench"></i>Intervention</a>
                 <ul class="sub-menu children dropdown-menu">
-                   <!-- <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Nouvelle demande</a></li>
+                    <!-- <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Nouvelle demande</a></li>
                     <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Demande planifié</a></li>
                     <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Demandé traité</a></li>
                     <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Demande evalué</a></li>
                     <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Demande cloturé</a></li>-->
-                    <li><a routerLink="/demande-intervention">Interventions <span class="badge badge-warning">1</span> </a></li>
+                    <li><a routerLink="/demande-intervention">Interventions <span class="badge badge-warning">1</span>
+                        </a></li>
 
                 </ul>
             </li>
@@ -124,20 +131,19 @@
                     <li><a routerLink="/operateurs">Opérateurs</a></li>
                 </ul>
             </li>
-        
+
             <li class="menu-title">Ressources Humaines</li>
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="menu-icon fa  fa-user"></i>RH</a>
                 <ul class="sub-menu children dropdown-menu">
                     <li><a routerLink="/employees">Employées <span class="badge badge-warning">1</span></a></li>
-                    <li><a routerLink="/pointage">Pointages</a></li>
                     <li><a routerLink="/fiche-de-paie">Fiche de paie</a></li>
                     <li><a routerLink="/conges">Congés</a></li>
                     <li><a routerLink="/licenciement">Licenciment</a></li>
                 </ul>
             </li>
-
+            <!--
             <li class="menu-title">Statistiques</li>
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -146,7 +152,7 @@
                     <li><a routerLink="/statistique-of">Ordre de fabrication</a></li>
                 </ul>
             </li>
-        
+        -->
             <li class="menu-title">Utilisateurs</li>
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -159,17 +165,18 @@
             </li>
 
 
-           <li class="menu-title">Options</li>
+            <li class="menu-title">Configurations</li>
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="menu-icon fa fa-th"></i>Options</a>
+                    <i class="menu-icon fa fa-cog"></i>Configurations</a>
                 <ul class="sub-menu children dropdown-menu">
-        
-                    <li><a routerLink="/notifications">Notifications</a></li>
-                    <li><a routerLink="/messages">Messages  <span class="badge badge-warning">1</span> </a></li>
+
+                    <li><a routerLink="/systeme-config">Système</a></li>
+                    <li><a routerLink="/email-config">Email </a></li>
+                    <li><a routerLink="/entreprise-config">Entreprise </a></li>
                 </ul>
             </li>
-        
+
         </ul>
-    </div><!-- /.navbar-collapse -->
+    </div>
 </nav>
