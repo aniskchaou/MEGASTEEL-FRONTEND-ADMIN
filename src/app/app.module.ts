@@ -96,7 +96,7 @@ import { LoginComponent } from './shared/login/login.component';
 
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
+
   { path: 'of', component: OfComponent },
   { path: 'familles', component: FamilleComponent },
   { path: 'bon-entree-fabrication', component: BonEntreeFabricationComponent },
@@ -179,6 +179,9 @@ const routes: Routes = [
   { path: 'ajouter-licenciement', component: AjouterLicenciementComponent },
   { path: 'edit-profile', component: EditUserComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login', pathMatch: 'full' },
 
 ];
 
