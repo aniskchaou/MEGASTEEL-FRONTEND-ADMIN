@@ -180,6 +180,7 @@ const routes: Routes = [
   { path: 'edit-profile', component: EditUserComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'zone-stockage', component: ZoneStockageComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
 
