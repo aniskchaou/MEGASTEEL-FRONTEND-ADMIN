@@ -178,9 +178,9 @@ const routes: Routes = [
   { path: 'ajouter-fiche-paie', component: AjouterFichePaieComponent },
   { path: 'ajouter-licenciement', component: AjouterLicenciementComponent },
   { path: 'edit-profile', component: EditUserComponent },
+  { path: 'zone-stockage', component: ZoneStockageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'zone-stockage', component: ZoneStockageComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
 
