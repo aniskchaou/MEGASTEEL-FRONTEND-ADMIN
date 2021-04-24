@@ -39,8 +39,8 @@ https://pfe2017-backend-production.herokuapp.com/
 <p>
 
 ## Technologies
-* PHP
-* Laravel
+* Spring boot
+* Angular
 
 
 ## Setup
